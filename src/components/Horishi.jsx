@@ -16,7 +16,7 @@ const Horishi = ({ lang }) => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
             <p className="text-xs tracking-[0.35em] text-white/60 uppercase">CREDITS</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold">{t(lang, "horishiTitle")}</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold neon-title">{t(lang, "horishiTitle")}</h2>
           </div>
           <p className="text-white/70">{t(lang, "horishiNote")}</p>
         </div>
@@ -25,7 +25,7 @@ const Horishi = ({ lang }) => {
             <motion.a
               key={credit.name}
               href={credit.link}
-              className="rounded-3xl border border-white/12 bg-black/50 backdrop-blur-xl p-5 hover:border-white/25 transition"
+              className="note-card backdrop-blur-xl p-5 hover:border-white/25 transition"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

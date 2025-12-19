@@ -14,8 +14,9 @@ const navItems = [
 const Header = ({ lang, setLang }) => {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
-      <div className="mx-auto max-w-6xl px-5 py-3 flex items-center justify-between gap-4">
-        <div className="font-extrabold text-sm tracking-[0.35em] uppercase text-white flex items-center gap-2">
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,63,180,0.2),rgba(60,242,210,0.15),rgba(255,184,47,0.25))]" aria-hidden />
+      <div className="mx-auto max-w-6xl px-5 py-3 flex items-center justify-between gap-4 relative">
+        <div className="font-extrabold text-sm tracking-[0.35em] uppercase text-white flex items-center gap-2 neon-title">
           <span className="h-2 w-2 rounded-full bg-fuchsia-400 animate-pulse" />
           IREZUMI CHILL LAB
         </div>
