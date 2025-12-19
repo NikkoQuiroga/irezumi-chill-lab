@@ -1,27 +1,23 @@
-export default function VHSBackground() {
-  return (
-    <div className="fixed inset-0 -z-50 overflow-hidden">
-      <video
-        className="h-full w-full object-cover scale-[1.06] opacity-90"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      >
-        <source src="/video/vhs-loop.mp4" type="video/mp4" />
-      </video>
+import React from "react";
 
-      {/* Neon wash */}
-      <div
-        className="absolute inset-0 mix-blend-screen opacity-60
-        bg-[radial-gradient(circle_at_22%_20%,rgba(255,0,200,0.62),transparent_45%),
-            radial-gradient(circle_at_75%_60%,rgba(0,255,220,0.48),transparent_52%),
-            radial-gradient(circle_at_50%_105%,rgba(190,255,0,0.26),transparent_55%)]"
+const VHSBackground = () => {
+  return (
+    <div className="fixed inset-0 -z-20 overflow-hidden">
+      <video
+        className="w-full h-full object-cover scale-105"
+        src="/video/vhs-loop.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/video/vhs-loop.jpg"
       />
 
-      {/* Vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.10),rgba(0,0,0,0.82))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,0,160,0.25),transparent_40%),radial-gradient(circle_at_80%_60%,rgba(0,255,220,0.2),transparent_40%),linear-gradient(to_bottom,rgba(0,0,0,0.35),rgba(0,0,0,0.75))]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/60" />
+      <div className="pointer-events-none absolute inset-0" style={{ boxShadow: "inset 0 0 180px rgba(0,0,0,0.65)" }} />
     </div>
   );
-}
+};
+
+export default VHSBackground;
