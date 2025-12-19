@@ -1,11 +1,14 @@
+import React from "react";
 import "@/styles/vhs.css";
 
-export default function NoiseOverlay() {
+const NoiseOverlay = () => {
   return (
-    <>
-      <div className="noise pointer-events-none fixed inset-0 -z-40 opacity-[0.18]" />
-      <div className="scanlines pointer-events-none fixed inset-0 -z-40 opacity-[0.16]" />
-      <div className="vhs-jitter pointer-events-none fixed inset-0 -z-40" />
-    </>
+    <div className="pointer-events-none fixed inset-0 -z-10">
+      <div className="vhs-noise" />
+      <div className="vhs-scanlines" />
+      <div className="vhs-jitter" />
+    </div>
   );
-}
+};
+
+export default NoiseOverlay;

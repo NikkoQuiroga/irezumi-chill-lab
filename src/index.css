@@ -9,6 +9,20 @@ body,
   background-color: #000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #e8e8f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(236, 72, 153, 0.35);
+  color: #fff;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
