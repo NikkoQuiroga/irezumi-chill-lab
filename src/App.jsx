@@ -18,10 +18,12 @@ export default function App() {
   const featured = useMemo(() => releases[0], []);
 
   return (
-    <div className="min-h-screen text-white relative">
+    <div className="min-h-screen text-white relative overflow-hidden">
       <VHSBackground />
       <NoiseOverlay />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_10%_20%,rgba(255,0,160,0.12),transparent_35%),radial-gradient(circle_at_90%_10%,rgba(0,255,220,0.12),transparent_40%)]" />
+      <div className="poster-stripes" />
+      <div className="orbit-dots" />
 
       <LanguageGate lang={lang} setLang={setLang} />
       <Header lang={lang} setLang={setLang} />

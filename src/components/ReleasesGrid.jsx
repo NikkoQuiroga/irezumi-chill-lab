@@ -8,7 +8,8 @@ const ReleasesGrid = ({ lang, releases }) => {
       <div className="mx-auto max-w-6xl px-5 space-y-3">
         <div className="flex items-center justify-between gap-3">
           <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold">{t(lang, "releasesTitle")}</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold neon-title">{t(lang, "releasesTitle")}</h2>
+            <div className="neon-divider mt-2" />
             <p className="text-white/70 mt-2">{t(lang, "releasesCopy")}</p>
           </div>
           <div className="hidden md:flex text-xs tracking-[0.3em] text-white/60">
@@ -23,7 +24,7 @@ const ReleasesGrid = ({ lang, releases }) => {
               href={release.youtubeUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="group relative overflow-hidden rounded-3xl border border-white/12 bg-black/45 backdrop-blur-lg shadow-[0_15px_50px_rgba(0,0,0,0.5)] transition duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden poster-card backdrop-blur-lg shadow-[0_15px_50px_rgba(0,0,0,0.5)] transition duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

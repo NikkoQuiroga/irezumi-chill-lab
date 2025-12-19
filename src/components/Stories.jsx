@@ -9,7 +9,7 @@ const Stories = ({ lang }) => {
       <div className="mx-auto max-w-6xl px-5 space-y-8">
         <div>
           <p className="text-xs tracking-[0.35em] text-white/60 uppercase">LAB NOTES</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold">{t(lang, "storiesTitle")}</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold neon-title">{t(lang, "storiesTitle")}</h2>
           <p className="text-white/70 mt-3 max-w-3xl">
             VHS texture, tattoo ritual, and city pop nostalgia captured in rolling notes.
           </p>
@@ -18,7 +18,7 @@ const Stories = ({ lang }) => {
           {copy.stories.map((story, idx) => (
             <motion.div
               key={story.title}
-              className="rounded-3xl border border-white/12 bg-black/50 backdrop-blur-xl p-6 space-y-3"
+              className="note-card backdrop-blur-xl p-6 space-y-3"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -16,8 +16,10 @@ const Hero = ({ lang, featured }) => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center">
+      <div className="hero-glow" aria-hidden />
+      <div className="sunburst" aria-hidden />
       <div className="mx-auto max-w-6xl px-5 w-full">
-        <div className="grid md:grid-cols-12 gap-10 items-end">
+        <div className="grid md:grid-cols-12 gap-10 items-end relative">
           <motion.div
             className="md:col-span-7 space-y-6"
             variants={fade}
@@ -37,11 +39,12 @@ const Hero = ({ lang, featured }) => {
               ))}
             </div>
 
-            <p className="text-xs tracking-[0.35em] text-white/70">
-              VHS TRANSMISSION // PARALLEL JAPAN 1987–1999 // LATE NIGHT LABEL
-            </p>
+            <div className="flex items-center gap-3 text-xs tracking-[0.35em] text-white/70 uppercase">
+              <span className="h-[3px] w-10 rounded-full bg-gradient-to-r from-fuchsia-400 via-amber-300 to-cyan-300 shadow-[0_0_18px_rgba(255,63,180,0.55)]" />
+              <p>VHS TRANSMISSION // PARALLEL JAPAN 1987–1999 // LATE NIGHT LABEL</p>
+            </div>
 
-            <h1 className="text-5xl md:text-7xl xl:text-8xl font-extrabold leading-[0.9] drop-shadow-[0_0_50px_rgba(255,0,200,0.35)]">
+            <h1 className="neon-title text-5xl md:text-7xl xl:text-8xl font-extrabold leading-[0.9] drop-shadow-[0_0_50px_rgba(255,0,200,0.35)]">
               {lang === "ja" ? "入れ墨チルラボ" : "IREZUMI CHILL LAB"}
             </h1>
 
@@ -86,13 +89,13 @@ const Hero = ({ lang, featured }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.05 }}
           >
-            <div className="relative rounded-3xl border border-white/15 bg-black/55 backdrop-blur-xl p-6 shadow-[0_25px_70px_rgba(0,0,0,0.55)] overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,0,160,0.25),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(0,255,220,0.22),transparent_45%)] blur-2xl opacity-60" />
+            <div className="relative holo-border p-6 md:p-7 overflow-hidden">
+              <div className="bubble-grid" aria-hidden />
               <div className="relative space-y-4">
                 <div className="text-sm tracking-[0.35em] text-white/70 uppercase">
                   {t(lang, "featuredTitle")}
                 </div>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 bg-black/40">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 bg-black/40 poster-card">
                   <img
                     src={featured.cover}
                     alt={featured.title.en}

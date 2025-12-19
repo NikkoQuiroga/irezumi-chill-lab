@@ -28,7 +28,7 @@ const Social = ({ lang }) => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <p className="text-xs tracking-[0.35em] text-white/60 uppercase">SIGNAL</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold">{t(lang, "socialTitle")}</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold neon-title">{t(lang, "socialTitle")}</h2>
           </div>
           <div className="text-sm text-white/70">{t(lang, "socialCta")}</div>
         </div>
@@ -39,7 +39,7 @@ const Social = ({ lang }) => {
               href={social.href}
               target="_blank"
               rel="noreferrer noopener"
-              className={`group relative overflow-hidden rounded-3xl border border-white/15 bg-black/50 backdrop-blur-xl p-6`}
+              className={`group relative overflow-hidden note-card backdrop-blur-xl p-6`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
