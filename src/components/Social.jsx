@@ -26,7 +26,7 @@ const socials = (lang) => [
 const Social = ({ lang }) => {
   return (
     <section id="social" className="py-16">
-      <div className="mx-auto max-w-6xl px-5 space-y-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 space-y-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <p className="text-xs tracking-[0.35em] text-white/60 uppercase">SIGNAL</p>
@@ -34,7 +34,7 @@ const Social = ({ lang }) => {
           </div>
           <div className="text-sm text-white/70">{t(lang, "socialCta")}</div>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {socials(lang).map((social, idx) => (
             <MotionCard
               key={social.label}

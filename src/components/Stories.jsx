@@ -8,7 +8,7 @@ const Stories = ({ lang }) => {
   const copy = stringsFor(lang);
   return (
     <section id="stories" className="py-16">
-      <div className="mx-auto max-w-6xl px-5 space-y-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 space-y-8">
         <div>
           <p className="text-xs tracking-[0.35em] text-white/60 uppercase">LAB NOTES</p>
           <h2 className="text-3xl md:text-4xl font-extrabold neon-title">{t(lang, "storiesTitle")}</h2>
@@ -16,7 +16,7 @@ const Stories = ({ lang }) => {
             VHS texture, tattoo ritual, and city pop nostalgia captured in rolling notes.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {copy.stories.map((story, idx) => (
             <MotionCard
               key={story.title}

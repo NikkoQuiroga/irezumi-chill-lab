@@ -8,19 +8,19 @@ const MotionCard = motion.div;
 const ReleasesGrid = ({ lang, releases }) => {
   return (
     <section id="releases" className="py-16">
-      <div className="mx-auto max-w-6xl px-5 space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <div>
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="space-y-2">
             <h2 className="text-3xl md:text-4xl font-extrabold neon-title">{t(lang, "releasesTitle")}</h2>
-            <div className="neon-divider mt-2" />
-            <p className="text-white/70 mt-2">{t(lang, "releasesCopy")}</p>
+            <div className="neon-divider" />
+            <p className="text-white/70">{t(lang, "releasesCopy")}</p>
           </div>
           <div className="hidden md:flex text-xs tracking-[0.3em] text-white/60">
             VHS CATALOG
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {releases.map((release, idx) => (
             <MotionCard
               key={release.id}

@@ -17,11 +17,11 @@ const Hero = ({ lang, featured }) => {
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center">
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-14 md:pb-20">
       <div className="hero-glow" aria-hidden />
-      <div className="sunburst" aria-hidden />
-      <div className="mx-auto max-w-6xl px-5 w-full">
-        <div className="grid md:grid-cols-12 gap-10 items-end relative">
+      <div className="hidden md:block sunburst" aria-hidden />
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 w-full">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-end relative">
           <MotionDiv
             className="md:col-span-7 space-y-6"
             variants={fade}
@@ -33,7 +33,7 @@ const Hero = ({ lang, featured }) => {
               {chips.map((chip) => (
                 <span
                   key={chip.label}
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-gradient-to-r ${chip.color} text-xs tracking-[0.35em] uppercase text-white shadow-[0_0_40px_rgba(0,0,0,0.3)]`}
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-gradient-to-r ${chip.color} text-[11px] sm:text-xs tracking-[0.28em] uppercase text-white shadow-[0_0_40px_rgba(0,0,0,0.3)]`}
                 >
                   <span className="h-2 w-2 rounded-full bg-white/80" />
                   {chip.label}
@@ -41,29 +41,29 @@ const Hero = ({ lang, featured }) => {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 text-xs tracking-[0.35em] text-white/70 uppercase">
+            <div className="flex flex-wrap items-center gap-3 text-[11px] sm:text-xs tracking-[0.32em] text-white/70 uppercase">
               <span className="h-[3px] w-10 rounded-full bg-gradient-to-r from-fuchsia-400 via-amber-300 to-cyan-300 shadow-[0_0_18px_rgba(255,63,180,0.55)]" />
-              <p>VHS TRANSMISSION // PARALLEL JAPAN 1987–1999 // LATE NIGHT LABEL</p>
+              <p className="leading-relaxed">VHS TRANSMISSION // PARALLEL JAPAN 1987–1999 // LATE NIGHT LABEL</p>
             </div>
 
-            <h1 className="neon-title text-5xl md:text-7xl xl:text-8xl font-extrabold leading-[0.9] drop-shadow-[0_0_50px_rgba(255,0,200,0.35)]">
+            <h1 className="neon-title text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-extrabold leading-[0.9] drop-shadow-[0_0_50px_rgba(255,0,200,0.35)]">
               {lang === "ja" ? "入れ墨チルラボ" : "IREZUMI CHILL LAB"}
             </h1>
 
-            <p className="text-lg md:text-xl text-white/80 max-w-3xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl leading-relaxed">
               {t(lang, "heroSubtitle")}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <NeonButton
                 onClick={() => window.open(featured.youtubeUrl, "_blank", "noopener")}
-                className="shadow-lg shadow-fuchsia-500/25"
+                className="shadow-lg shadow-fuchsia-500/25 justify-center sm:justify-center"
               >
                 ▶ {t(lang, "heroCtaWatch")}
               </NeonButton>
               <NeonButton
                 variant="secondary"
-                className="backdrop-blur-md"
+                className="backdrop-blur-md justify-center sm:justify-center"
                 onClick={() => document.getElementById("releases")?.scrollIntoView({ behavior: "smooth" })}
               >
                 {t(lang, "heroCtaArchive")}
@@ -91,7 +91,7 @@ const Hero = ({ lang, featured }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.05 }}
           >
-            <div className="relative holo-border p-6 md:p-7 overflow-hidden">
+            <div className="relative holo-border p-5 sm:p-6 md:p-7 overflow-hidden">
               <div className="bubble-grid" aria-hidden />
               <div className="relative space-y-4">
                 <div className="text-sm tracking-[0.35em] text-white/70 uppercase">
@@ -106,21 +106,21 @@ const Hero = ({ lang, featured }) => {
                 </div>
                 <div>
                   <div className="text-xs text-white/60 tracking-[0.3em] uppercase">{featured.year}</div>
-                  <h3 className="text-3xl font-extrabold mt-1">{featured.title[lang] || featured.title.en}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold mt-1">{featured.title[lang] || featured.title.en}</h3>
                   <p className="text-white/75 leading-relaxed mt-2">
                     {featured.story[lang] || featured.story.en}
                   </p>
                 </div>
-                <div className="flex gap-3 flex-wrap">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <NeonButton
-                    className="flex-1 justify-center"
+                    className="w-full justify-center"
                     onClick={() => window.open(featured.youtubeUrl, "_blank", "noopener")}
                   >
                     ▶ YouTube
                   </NeonButton>
                   <NeonButton
                     variant="secondary"
-                    className="flex-1 justify-center"
+                    className="w-full justify-center"
                     onClick={() => document.getElementById("stories")?.scrollIntoView({ behavior: "smooth" })}
                   >
                     {t(lang, "featuredStory")}
@@ -128,7 +128,7 @@ const Hero = ({ lang, featured }) => {
                 </div>
               </div>
             </div>
-            </MotionDiv>
+          </MotionDiv>
         </div>
       </div>
     </section>

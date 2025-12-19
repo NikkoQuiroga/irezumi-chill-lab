@@ -14,7 +14,7 @@ const MotionCard = motion.a;
 const Horishi = ({ lang }) => {
   return (
     <section id="horishi" className="py-16">
-      <div className="mx-auto max-w-6xl px-5 space-y-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 space-y-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
             <p className="text-xs tracking-[0.35em] text-white/60 uppercase">CREDITS</p>
@@ -22,7 +22,7 @@ const Horishi = ({ lang }) => {
           </div>
           <p className="text-white/70">{t(lang, "horishiNote")}</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-5">
           {credits.map((credit, idx) => (
             <MotionCard
               key={credit.name}

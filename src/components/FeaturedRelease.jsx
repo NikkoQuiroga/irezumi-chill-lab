@@ -7,22 +7,22 @@ const MotionPanel = motion.div;
 
 const FeaturedRelease = ({ lang, featured }) => {
   return (
-    <section className="py-12" id="featured">
-      <div className="mx-auto max-w-6xl px-5">
+    <section className="py-12 sm:py-14" id="featured">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5">
         <MotionPanel
-          className="relative overflow-hidden holo-border p-6 md:p-8"
+          className="relative overflow-hidden holo-border p-5 sm:p-6 md:p-8"
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
           <div className="absolute inset-0 bubble-grid" aria-hidden />
-          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             <div className="space-y-4">
               <p className="text-xs tracking-[0.35em] uppercase text-white/70">
                 {t(lang, "featuredTitle")}
               </p>
-              <h2 className="text-4xl font-extrabold leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
                 {featured.title[lang] || featured.title.en}
               </h2>
               <p className="text-white/75 leading-relaxed">
@@ -41,7 +41,7 @@ const FeaturedRelease = ({ lang, featured }) => {
                   {featured.year}
                 </span>
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                 <NeonButton onClick={() => window.open(featured.youtubeUrl, "_blank", "noopener")}>
                   ▶ {t(lang, "youtube")}
                 </NeonButton>

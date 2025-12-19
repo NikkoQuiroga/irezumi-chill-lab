@@ -12,7 +12,7 @@ const ListeningBar = ({ lang, featured }) => {
 
   return (
     <MotionContainer
-      className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4"
+      className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-3 sm:px-4"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 120, damping: 18 }}
@@ -28,13 +28,13 @@ const ListeningBar = ({ lang, featured }) => {
         />
         <div className="absolute inset-0 neon-grid" aria-hidden />
 
-        <div className="relative grid md:grid-cols-[auto,1fr,auto] items-center gap-4 p-4 md:p-5">
-          <motion.div whileHover={{ rotate: -2, scale: 1.03 }} className="w-24 h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden border border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.55)]">
+        <div className="relative grid gap-4 p-4 sm:p-5 md:grid-cols-[auto,1fr,auto] items-center">
+          <motion.div whileHover={{ rotate: -2, scale: 1.03 }} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden border border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.55)]">
             <img src={featured.cover} alt={title} className="w-full h-full object-cover" />
           </motion.div>
 
           <div className="space-y-2">
-            <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-white/70">
+            <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-white/70">
               <span className="h-[3px] w-6 rounded-full bg-gradient-to-r from-fuchsia-400 via-amber-300 to-cyan-300 shadow-[0_0_12px_rgba(255,63,180,0.5)]" />
               <span>Now streaming</span>
               <div className="equalizer" aria-hidden>
@@ -59,16 +59,16 @@ const ListeningBar = ({ lang, featured }) => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 min-w-[180px]">
+          <div className="flex flex-col gap-2 md:min-w-[180px] w-full md:w-auto">
             <NeonButton
-              className="justify-center text-xs"
+              className="justify-center text-xs w-full"
               onClick={() => window.open(featured.spotifyUrl, "_blank", "noopener")}
             >
               ♫ Listen on Spotify
             </NeonButton>
             <NeonButton
               variant="secondary"
-              className="justify-center text-xs"
+              className="justify-center text-xs w-full"
               onClick={() => window.open(featured.youtubeUrl, "_blank", "noopener")}
             >
               ▶ Watch on YouTube
