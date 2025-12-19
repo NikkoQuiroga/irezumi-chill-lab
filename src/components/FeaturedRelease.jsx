@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import NeonButton from "./NeonButton";
 import { t } from "@/i18n/i18n";
 
+const MotionPanel = motion.div;
+
 const FeaturedRelease = ({ lang, featured }) => {
   return (
     <section className="py-12" id="featured">
       <div className="mx-auto max-w-6xl px-5">
-        <motion.div
+        <MotionPanel
           className="relative overflow-hidden holo-border p-6 md:p-8"
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -45,11 +47,32 @@ const FeaturedRelease = ({ lang, featured }) => {
                 </NeonButton>
                 <NeonButton
                   variant="secondary"
+                  onClick={() => window.open(featured.spotifyUrl, "_blank", "noopener")}
+                >
+                  ♫ Spotify
+                </NeonButton>
+                <NeonButton
+                  variant="secondary"
                   onClick={() => document.getElementById("stories")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   {t(lang, "featuredStory")}
                 </NeonButton>
               </div>
+              {featured.spotifyEmbed && (
+                <div className="space-y-2">
+                  <p className="text-xs uppercase tracking-[0.25em] text-white/60">Live player</p>
+                  <div className="overflow-hidden rounded-2xl border border-white/20 bg-black/60 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
+                    <iframe
+                      title="Spotify player"
+                      className="w-full"
+                      style={{ minHeight: "152px" }}
+                      loading="lazy"
+                      src={featured.spotifyEmbed}
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-black/60 shadow-[0_20px_60px_rgba(0,0,0,0.5)] poster-card">
@@ -61,7 +84,7 @@ const FeaturedRelease = ({ lang, featured }) => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </MotionPanel>
       </div>
     </section>
   );

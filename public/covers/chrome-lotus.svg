@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0718" />
+      <stop offset="100%" stop-color="#20103d" />
+    </linearGradient>
+    <radialGradient id="lotus" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#7df4de" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#7df4de" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#ffb82f" stop-opacity="0.0" />
+    </radialGradient>
+    <linearGradient id="rings" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3fb4" />
+      <stop offset="50%" stop-color="#ffb82f" />
+      <stop offset="100%" stop-color="#3cf2d2" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#lotus)" opacity="0.45" />
+  <g opacity="0.3">
+    <circle cx="260" cy="220" r="150" fill="#ff3fb4" />
+    <circle cx="1000" cy="680" r="240" fill="#3cf2d2" />
+  </g>
+  <g fill="none" stroke="url(#rings)" stroke-width="8" opacity="0.55">
+    <path d="M160 660 C340 520 560 520 760 660" />
+    <path d="M220 700 C420 560 560 560 860 700" />
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2">
+    <circle cx="600" cy="360" r="180" />
+    <circle cx="600" cy="360" r="120" />
+    <circle cx="600" cy="360" r="80" />
+  </g>
+  <g fill="#f8fffb" font-family="'Space Grotesk', 'Zen Maru Gothic', sans-serif">
+    <text x="320" y="340" font-size="52" font-weight="700" letter-spacing="4">Chrome Lotus Bloom</text>
+    <text x="320" y="390" font-size="26" fill="#b7f5ff" letter-spacing="3">Synth petals under UV light</text>
+    <text x="320" y="430" font-size="20" fill="#ffb82f" letter-spacing="2">Tattoo ritual • Ambient glow</text>
+  </g>
+  <g transform="translate(680,220) rotate(-8)" fill="#0b0915" stroke="#3cf2d2" stroke-width="1.8" stroke-opacity="0.5">
+    <path d="M120 0 L200 120 L120 240 L40 120 Z" fill="#111427" />
+    <circle cx="120" cy="120" r="70" fill="#0b0f1f" stroke="#ff3fb4" stroke-width="4" stroke-opacity="0.6" />
+    <text x="78" y="130" font-family="'Bungee Inline', sans-serif" font-size="46" fill="#f8fffb">VHS</text>
+  </g>
+  <rect x="360" y="480" width="520" height="120" rx="26" fill="#0d0e22" opacity="0.75" stroke="#ffffff" stroke-opacity="0.2" />
+  <text x="390" y="540" font-size="24" font-family="'Space Grotesk', sans-serif" letter-spacing="4" fill="#d8f2ff">IREZUMI CHILL LAB // 2024</text>
+  <text x="390" y="575" font-size="18" font-family="'Space Grotesk', sans-serif" letter-spacing="3" fill="#8debd5">Chrome reflections • Tape warmth • Lotus bloom</text>
+</svg>

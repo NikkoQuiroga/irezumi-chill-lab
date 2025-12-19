@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { stringsFor, t } from "@/i18n/i18n";
 
+const MotionCard = motion.div;
+
 const Stories = ({ lang }) => {
   const copy = stringsFor(lang);
   return (
@@ -16,7 +18,7 @@ const Stories = ({ lang }) => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {copy.stories.map((story, idx) => (
-            <motion.div
+            <MotionCard
               key={story.title}
               className="note-card backdrop-blur-xl p-6 space-y-3"
               initial={{ opacity: 0, y: 30 }}
@@ -27,7 +29,7 @@ const Stories = ({ lang }) => {
               <div className="text-xs tracking-[0.3em] text-white/60 uppercase">NOTE {idx + 1}</div>
               <h3 className="text-xl font-bold">{story.title}</h3>
               <p className="text-white/75 leading-relaxed">{story.body}</p>
-            </motion.div>
+            </MotionCard>
           ))}
         </div>
       </div>

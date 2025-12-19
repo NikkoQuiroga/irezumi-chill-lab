@@ -9,6 +9,8 @@ const credits = [
   { name: "Kagerou Collective", note: "Printmaking duo feeding our poster grit.", link: "#" },
 ];
 
+const MotionCard = motion.a;
+
 const Horishi = ({ lang }) => {
   return (
     <section id="horishi" className="py-16">
@@ -22,7 +24,7 @@ const Horishi = ({ lang }) => {
         </div>
         <div className="grid md:grid-cols-2 gap-5">
           {credits.map((credit, idx) => (
-            <motion.a
+            <MotionCard
               key={credit.name}
               href={credit.link}
               className="note-card backdrop-blur-xl p-5 hover:border-white/25 transition"
@@ -37,7 +39,7 @@ const Horishi = ({ lang }) => {
               <span className="text-sm text-cyan-200/80 mt-3 inline-flex items-center gap-2">
                 {credit.link === "#" ? "Link coming soon" : credit.link}
               </span>
-            </motion.a>
+            </MotionCard>
           ))}
         </div>
       </div>

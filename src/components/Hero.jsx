@@ -8,6 +8,8 @@ const fade = {
   show: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
+const MotionDiv = motion.div;
+
 const Hero = ({ lang, featured }) => {
   const chips = [
     { label: t(lang, "heroChip1"), color: "from-fuchsia-500/40 to-cyan-400/40" },
@@ -20,7 +22,7 @@ const Hero = ({ lang, featured }) => {
       <div className="sunburst" aria-hidden />
       <div className="mx-auto max-w-6xl px-5 w-full">
         <div className="grid md:grid-cols-12 gap-10 items-end relative">
-          <motion.div
+          <MotionDiv
             className="md:col-span-7 space-y-6"
             variants={fade}
             initial="hidden"
@@ -81,9 +83,9 @@ const Hero = ({ lang, featured }) => {
                 BPM 78–96
               </span>
             </div>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div
+          <MotionDiv
             className="md:col-span-5"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,7 +128,7 @@ const Hero = ({ lang, featured }) => {
                 </div>
               </div>
             </div>
-          </motion.div>
+            </MotionDiv>
         </div>
       </div>
     </section>

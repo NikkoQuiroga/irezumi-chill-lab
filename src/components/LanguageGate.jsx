@@ -2,19 +2,28 @@ import React, { useEffect, useState } from "react";
 import { detectLocale, stringsFor } from "@/i18n/i18n";
 
 const STORAGE_KEY = "icl_lang";
+const getStoredLang = () => {
+  if (typeof localStorage === "undefined") return null;
+  return localStorage.getItem(STORAGE_KEY);
+};
 
 const LanguageGate = ({ lang, setLang }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(() => {
+    const stored = getStoredLang();
+    if (stored) return false;
+    const detected = detectLocale();
+    return detected !== "en";
+  });
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = getStoredLang();
     if (stored) {
       setLang(stored);
       return;
     }
     const detected = detectLocale();
     if (detected !== "en") {
-      setOpen(true);
+      setLang(detected);
     }
   }, [setLang]);
 
