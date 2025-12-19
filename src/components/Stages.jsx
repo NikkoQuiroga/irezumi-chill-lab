@@ -9,7 +9,7 @@ const Stages = ({ lang }) => {
   const copy = stringsFor(lang);
   return (
     <section id="stages" className="py-16">
-      <div className="mx-auto max-w-6xl px-5 space-y-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 space-y-8">
         <div>
           <p className="text-xs tracking-[0.35em] text-white/60 uppercase">VHS FEST</p>
           <h2 className="text-3xl md:text-4xl font-extrabold mt-1 neon-title">{t(lang, "stagesTitle")}</h2>
@@ -17,7 +17,7 @@ const Stages = ({ lang }) => {
             {copy.heroSubtitle}
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {copy.stages.map((stage, idx) => (
             <MotionCard
               key={stage.tag}
