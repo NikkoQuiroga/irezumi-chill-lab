@@ -11,6 +11,7 @@ import Horishi from "@/components/Horishi";
 import Social from "@/components/Social";
 import Footer from "@/components/Footer";
 import LanguageGate from "@/components/LanguageGate";
+import ListeningBar from "@/components/ListeningBar";
 import { releases } from "@/data/releases";
 
 export default function App() {
@@ -28,7 +29,7 @@ export default function App() {
       <LanguageGate lang={lang} setLang={setLang} />
       <Header lang={lang} setLang={setLang} />
 
-      <main className="relative z-10 space-y-4 pb-16">
+      <main className="relative z-10 space-y-4 pb-32 md:pb-40">
         <Hero lang={lang} featured={featured} />
         <FeaturedRelease lang={lang} featured={featured} />
         <ReleasesGrid lang={lang} releases={releases} />
@@ -38,6 +39,7 @@ export default function App() {
         <Social lang={lang} />
       </main>
 
+      <ListeningBar lang={lang} featured={featured} />
       <Footer />
     </div>
   );

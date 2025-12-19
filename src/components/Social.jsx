@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { t } from "@/i18n/i18n";
 import NeonButton from "./NeonButton";
 
+const MotionCard = motion.a;
+
 const socials = (lang) => [
   {
     label: t(lang, "youtube"),
@@ -34,7 +36,7 @@ const Social = ({ lang }) => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {socials(lang).map((social, idx) => (
-            <motion.a
+            <MotionCard
               key={social.label}
               href={social.href}
               target="_blank"
@@ -56,7 +58,7 @@ const Social = ({ lang }) => {
                   ↗
                 </NeonButton>
               </div>
-            </motion.a>
+            </MotionCard>
           ))}
         </div>
       </div>

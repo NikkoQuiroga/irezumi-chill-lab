@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d031b" />
+      <stop offset="40%" stop-color="#311254" />
+      <stop offset="100%" stop-color="#0c142f" />
+    </linearGradient>
+    <radialGradient id="pulse" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ff3fb4" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ff3fb4" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#00ffd1" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="horizon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#65c7ff" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#ffb82f" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ff3fb4" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0.4" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.18" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#pulse)" opacity="0.35" />
+  <g filter="url(#grain)">
+    <rect width="1200" height="900" fill="#ffffff" opacity="0.12" />
+  </g>
+  <g opacity="0.45">
+    <circle cx="180" cy="760" r="220" fill="#ff3fb4" />
+    <circle cx="1040" cy="160" r="180" fill="#3cf2d2" />
+  </g>
+  <path d="M60 640 Q300 520 600 540 T1140 520" fill="none" stroke="url(#horizon)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M120 580 Q320 460 540 480 T1080 470" fill="none" stroke="#6ef8f1" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round" />
+  <g fill="#fff" font-family="'Space Grotesk', 'Bungee Inline', sans-serif" font-weight="700" letter-spacing="6" text-transform="uppercase">
+    <text x="80" y="180" font-size="54" fill="#f8fffb" opacity="0.9">Night Compass</text>
+    <text x="80" y="240" font-size="26" fill="#94f7ff" opacity="0.8">Neon rain / Tape hiss / Low bass</text>
+    <text x="80" y="300" font-size="20" fill="#ffbff0" opacity="0.8">IREZUMI CHILL LAB // VHS LABEL</text>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5">
+    <circle cx="900" cy="520" r="200" />
+    <circle cx="900" cy="520" r="120" />
+    <line x1="900" y1="320" x2="900" y2="720" />
+    <line x1="700" y1="520" x2="1100" y2="520" />
+  </g>
+  <rect x="760" y="720" width="320" height="90" rx="18" fill="#0b0915" opacity="0.85" stroke="#ff3fb4" stroke-opacity="0.4" />
+  <text x="790" y="775" font-size="22" fill="#e6f7ff" font-family="'Space Grotesk', sans-serif" letter-spacing="2">BPM 78–96 • VHS TRANSMISSION</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b0d1c" />
+      <stop offset="50%" stop-color="#0f1b33" />
+      <stop offset="100%" stop-color="#1a0f28" />
+    </linearGradient>
+    <linearGradient id="grid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#66d9ff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ff7bd8" stop-opacity="0.35" />
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#ffb82f" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#ffb82f" stop-opacity="0.0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <rect width="1200" height="900" fill="url(#glow)" opacity="0.4" />
+  <g stroke="url(#grid)" stroke-width="2" opacity="0.4">
+    <path d="M120 720 L1080 720" />
+    <path d="M120 620 L1080 620" />
+    <path d="M120 520 L1080 520" />
+    <path d="M120 420 L1080 420" />
+    <path d="M120 320 L1080 320" />
+    <path d="M220 240 L220 800" />
+    <path d="M420 180 L420 800" />
+    <path d="M620 150 L620 800" />
+    <path d="M820 180 L820 800" />
+    <path d="M1020 220 L1020 800" />
+  </g>
+  <g opacity="0.45">
+    <circle cx="140" cy="200" r="120" fill="#62e0c8" />
+    <circle cx="1040" cy="760" r="210" fill="#ff3fb4" />
+  </g>
+  <rect x="140" y="180" width="560" height="340" rx="32" fill="#0d1328" opacity="0.7" stroke="#ffffff" stroke-opacity="0.18" />
+  <text x="180" y="260" font-family="'Space Grotesk', sans-serif" font-size="52" fill="#f8fffb" letter-spacing="4">Shibuya in Winter 1995</text>
+  <text x="180" y="310" font-family="'Space Grotesk', sans-serif" font-size="28" fill="#9ae0ff" letter-spacing="3">City lights over chrome snow</text>
+  <text x="180" y="360" font-family="'Bungee Inline', sans-serif" font-size="24" fill="#ffb82f" letter-spacing="2">Tape static / Parallel Japan</text>
+  <rect x="180" y="400" width="480" height="8" rx="8" fill="#ff3fb4" opacity="0.7" />
+  <rect x="180" y="420" width="380" height="8" rx="8" fill="#3cf2d2" opacity="0.6" />
+  <rect x="740" y="160" width="280" height="500" rx="50" fill="#0b0919" opacity="0.8" stroke="#66d9ff" stroke-opacity="0.35" />
+  <circle cx="880" cy="400" r="120" fill="#11162b" stroke="#ffb82f" stroke-opacity="0.35" stroke-width="6" />
+  <circle cx="880" cy="400" r="70" fill="#0b0919" stroke="#3cf2d2" stroke-opacity="0.6" stroke-width="4" />
+  <text x="800" y="420" font-family="'Bungee Inline', sans-serif" font-size="54" fill="#f8fffb" opacity="0.9">VHS</text>
+  <text x="760" y="520" font-family="'Space Grotesk', sans-serif" font-size="20" fill="#cfe7ff" letter-spacing="2">Late night label edition</text>
+</svg>

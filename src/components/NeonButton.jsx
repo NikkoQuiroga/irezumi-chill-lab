@@ -8,9 +8,11 @@ const variants = {
     "btn-secondary text-white font-semibold",
 };
 
+const MotionButton = motion.button;
+
 const NeonButton = ({ children, variant = "primary", className = "", ...props }) => {
   return (
-    <motion.button
+    <MotionButton
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.98 }}
       className={`neon-btn relative overflow-hidden inline-flex items-center justify-center gap-2 uppercase tracking-[0.15em] rounded-2xl px-5 py-3 transition duration-200 ${variants[variant]} ${className}`}
@@ -19,7 +21,7 @@ const NeonButton = ({ children, variant = "primary", className = "", ...props })
       <span className="btn-glow" aria-hidden />
       <span className="btn-sheen" aria-hidden />
       {children}
-    </motion.button>
+    </MotionButton>
   );
 };
 

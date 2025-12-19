@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { t, stringsFor } from "@/i18n/i18n";
 import NeonButton from "./NeonButton";
 
+const MotionCard = motion.div;
+
 const Stages = ({ lang }) => {
   const copy = stringsFor(lang);
   return (
@@ -17,7 +19,7 @@ const Stages = ({ lang }) => {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {copy.stages.map((stage, idx) => (
-            <motion.div
+            <MotionCard
               key={stage.tag}
               className="relative note-card backdrop-blur-xl p-6 overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
@@ -34,7 +36,7 @@ const Stages = ({ lang }) => {
                   {t(lang, "openPlaylist")}
                 </NeonButton>
               </div>
-            </motion.div>
+            </MotionCard>
           ))}
         </div>
       </div>

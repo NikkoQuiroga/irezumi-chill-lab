@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { t } from "@/i18n/i18n";
+import NeonButton from "./NeonButton";
+
+const MotionCard = motion.div;
 
 const ReleasesGrid = ({ lang, releases }) => {
   return (
@@ -19,11 +22,8 @@ const ReleasesGrid = ({ lang, releases }) => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {releases.map((release, idx) => (
-            <motion.a
+            <MotionCard
               key={release.id}
-              href={release.youtubeUrl}
-              target="_blank"
-              rel="noreferrer noopener"
               className="group relative overflow-hidden poster-card backdrop-blur-lg shadow-[0_15px_50px_rgba(0,0,0,0.5)] transition duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,8 +57,23 @@ const ReleasesGrid = ({ lang, releases }) => {
                     </span>
                   ))}
                 </div>
+                <div className="mt-4 grid grid-cols-2 gap-2">
+                  <NeonButton
+                    className="w-full justify-center text-xs"
+                    onClick={() => window.open(release.spotifyUrl, "_blank", "noopener")}
+                  >
+                    ♫ Spotify
+                  </NeonButton>
+                  <NeonButton
+                    variant="secondary"
+                    className="w-full justify-center text-xs"
+                    onClick={() => window.open(release.youtubeUrl, "_blank", "noopener")}
+                  >
+                    ▶ YouTube
+                  </NeonButton>
+                </div>
               </div>
-            </motion.a>
+            </MotionCard>
           ))}
         </div>
       </div>
